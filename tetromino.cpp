@@ -7,18 +7,16 @@ using namespace std;
 static const int MAX_SIZE = 4;
 
 // 디버그용 이름
-//std::string name_;
+std::string name_;
 
 // 테트로미노의 모양을 저장하는 배열
 // shape[x][y]가 true인 경우 x, y 위치에 블록이 있는 것이고 false의 경우 없는
 // 것이다.
-//bool shape_[MAX_SIZE][MAX_SIZE];
-
+bool shape_[MAX_SIZE][MAX_SIZE];
 // 회전되지 않은 원래 테트로미노 객체를 저장하는 포인터
-//Tetromino *original_;
-
+Tetromino *original_;
 // 테트로미노의 사이즈
-//int size_;
+int size_;
 
 // 사이즈와 shape 문자열을 통해 생성한다.
 // 문자열은 size * size 길이의 문자열이 주어진다.
@@ -56,13 +54,13 @@ Tetromino::Tetromino(std::string name, int size, std::string shape) {
 }
 
 // 이름을 반환한다.
-//std::string name() { return name_; }
+std::string name() { return name_; }
 
 // 테트로미노의 사이즈를 반환한다.
-//int size() { return size_; }
+int size() { return size_; }
 
 // 회전되지 않은 원래 테트로미노 객체의 포인터를 반환한다.
-//Tetromino *original() { return original_; }
+Tetromino *original() { return original_; }
 
 // 시계 방향으로 회전한 모습의 테트로미노 객체를 반환한다.
 Tetromino Tetromino::rotatedCW() {
